@@ -1,0 +1,26 @@
+PODS:
+  - ChainLayout (0.2.0)
+  - Realm (10.7.6):
+    - Realm/Headers (= 10.7.6)
+  - Realm/Headers (10.7.6)
+  - RealmSwift (10.7.6):
+    - Realm (= 10.7.6)
+
+DEPENDENCIES:
+  - ChainLayout
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ChainLayout
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  ChainLayout: 36a3f76fba47ccc510a0fe3f9e67aab9b27371ef
+  Realm: ed860452717c8db8f4bf832b6807f7f2ce708839
+  RealmSwift: e31c4ddbcc42ac879313d656b86f9ca539f6f4f4
+
+PODFILE CHECKSUM: 8e531d53d691cf2be7c26f16b171ab3822a705db
+
+COCOAPODS: 1.10.1
