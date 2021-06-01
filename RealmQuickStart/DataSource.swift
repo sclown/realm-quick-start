@@ -2,14 +2,17 @@ import UIKit
 
 final class DataSource: NSObject, UICollectionViewDataSource {
     private var tasks: [String] = []
+    private let dataBase = DataBase()
     
     func attach(to collection: UICollectionView) {
         collection.dataSource = self
         collection.register(UICollectionViewListCell.self)
+        tasks = dataBase.load()
     }
     
     func append(_ item: String) {
         tasks.append(item)
+        dataBase.save(item)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
