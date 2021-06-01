@@ -22,6 +22,13 @@ final class DataBase {
         }
     }
     
+    func save(realmItem: RealmItem) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(realmItem)
+        }
+    }
+    
     func load() -> Results<RealmItem> {
         let realm = try! Realm()
         return realm.objects(RealmItem.self)
@@ -40,10 +47,12 @@ final class DataBase {
 class RealmItem: Object {
     @objc dynamic var title = ""
     @objc dynamic var time: RealmItemTime?
+    @objc dynamic var date = Date(timeIntervalSince1970: 0)
 
-    convenience init(title: String) {
+    convenience init(title: String, date: Date = Date()) {
         self.init()
         self.title = title
+        self.date = date
     }
 }
 
