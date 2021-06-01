@@ -8,9 +8,10 @@
 import UIKit
 import ChainLayout
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     private let layout = UICollectionViewCompositionalLayout.list(using: .init(appearance: .plain))
+    private lazy var collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
     private let dataSource = DataSource()
     private let input = UITextField()
     private var tasks: [String] = []
@@ -18,7 +19,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        setupCollection()
+        setupInput()
+    }
+        
+    private func setupCollection() {
         collection.backgroundColor = .white
         collection.add(into: view)
             .leading()
@@ -26,7 +31,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             .top(0, toSafeArea: true)
             .done()
         dataSource.attach(to: collection)
-
+        collection.delegate = self
+    }
+    
+    private func setupInput() {
         let separator = UIView().add(into: view)
             .height(1)
             .leading()
@@ -47,7 +55,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         input.becomeFirstResponder()
     }
+}
 
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        present(TimeDetailsViewController(), animated: true)
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         input.text.map { dataSource.append($0) }
         layout.collectionView?.reloadData()
@@ -55,4 +71,3 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 }
-

@@ -13,22 +13,15 @@
 		072ADA562656AFE2008ED14E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072ADA552656AFE2008ED14E /* Assets.xcassets */; };
 		072ADA592656AFE2008ED14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072ADA572656AFE2008ED14E /* LaunchScreen.storyboard */; };
 		072ADA642656AFE2008ED14E /* RealmQuickStartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ADA632656AFE2008ED14E /* RealmQuickStartTests.swift */; };
-		072ADA6F2656AFE2008ED14E /* RealmQuickStartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ADA6E2656AFE2008ED14E /* RealmQuickStartUITests.swift */; };
 		072ADA7D2656D00E008ED14E /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ADA7C2656D00E008ED14E /* UICollectionViewExtension.swift */; };
 		072ADA7F26571805008ED14E /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ADA7E26571804008ED14E /* DataSource.swift */; };
+		07EEB5E2265B83F2006A2F28 /* TimeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB5E1265B83F2006A2F28 /* TimeDetailsViewController.swift */; };
 		07EEB5F12666D4CE006A2F28 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB5F02666D4CE006A2F28 /* DataBase.swift */; };
 		8BAE36FA03A9AF5A33932CD0 /* Pods_RealmQuickStart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2843874EB83D8D6F6F7745 /* Pods_RealmQuickStart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		072ADA602656AFE2008ED14E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 072ADA412656AFDE008ED14E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 072ADA482656AFDE008ED14E;
-			remoteInfo = RealmQuickStart;
-		};
-		072ADA6B2656AFE2008ED14E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 072ADA412656AFDE008ED14E /* Project object */;
 			proxyType = 1;
@@ -48,11 +41,9 @@
 		072ADA5F2656AFE2008ED14E /* RealmQuickStartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmQuickStartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		072ADA632656AFE2008ED14E /* RealmQuickStartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuickStartTests.swift; sourceTree = "<group>"; };
 		072ADA652656AFE2008ED14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		072ADA6A2656AFE2008ED14E /* RealmQuickStartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmQuickStartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		072ADA6E2656AFE2008ED14E /* RealmQuickStartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuickStartUITests.swift; sourceTree = "<group>"; };
-		072ADA702656AFE2008ED14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072ADA7C2656D00E008ED14E /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		072ADA7E26571804008ED14E /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		07EEB5E1265B83F2006A2F28 /* TimeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDetailsViewController.swift; sourceTree = "<group>"; };
 		07EEB5F02666D4CE006A2F28 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		540FC81D500CFC4C8D454F66 /* Pods-RealmQuickStart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmQuickStart.debug.xcconfig"; path = "Target Support Files/Pods-RealmQuickStart/Pods-RealmQuickStart.debug.xcconfig"; sourceTree = "<group>"; };
 		B4809B31068C053978DFDD25 /* Pods-RealmQuickStart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmQuickStart.release.xcconfig"; path = "Target Support Files/Pods-RealmQuickStart/Pods-RealmQuickStart.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,13 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		072ADA672656AFE2008ED14E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,7 +74,6 @@
 			children = (
 				072ADA4B2656AFDE008ED14E /* RealmQuickStart */,
 				072ADA622656AFE2008ED14E /* RealmQuickStartTests */,
-				072ADA6D2656AFE2008ED14E /* RealmQuickStartUITests */,
 				072ADA4A2656AFDE008ED14E /* Products */,
 				1E7E7143F721AE960248F69C /* Pods */,
 				9B16343136DBA0B477BE24CE /* Frameworks */,
@@ -102,7 +85,6 @@
 			children = (
 				072ADA492656AFDE008ED14E /* RealmQuickStart.app */,
 				072ADA5F2656AFE2008ED14E /* RealmQuickStartTests.xctest */,
-				072ADA6A2656AFE2008ED14E /* RealmQuickStartUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +95,7 @@
 				072ADA4C2656AFDE008ED14E /* AppDelegate.swift */,
 				072ADA4E2656AFDE008ED14E /* SceneDelegate.swift */,
 				072ADA502656AFDE008ED14E /* ViewController.swift */,
+				07EEB5E1265B83F2006A2F28 /* TimeDetailsViewController.swift */,
 				072ADA7E26571804008ED14E /* DataSource.swift */,
 				07EEB5F02666D4CE006A2F28 /* DataBase.swift */,
 				072ADA7C2656D00E008ED14E /* UICollectionViewExtension.swift */,
@@ -130,15 +113,6 @@
 				072ADA652656AFE2008ED14E /* Info.plist */,
 			);
 			path = RealmQuickStartTests;
-			sourceTree = "<group>";
-		};
-		072ADA6D2656AFE2008ED14E /* RealmQuickStartUITests */ = {
-			isa = PBXGroup;
-			children = (
-				072ADA6E2656AFE2008ED14E /* RealmQuickStartUITests.swift */,
-				072ADA702656AFE2008ED14E /* Info.plist */,
-			);
-			path = RealmQuickStartUITests;
 			sourceTree = "<group>";
 		};
 		1E7E7143F721AE960248F69C /* Pods */ = {
@@ -198,24 +172,6 @@
 			productReference = 072ADA5F2656AFE2008ED14E /* RealmQuickStartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		072ADA692656AFE2008ED14E /* RealmQuickStartUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 072ADA792656AFE2008ED14E /* Build configuration list for PBXNativeTarget "RealmQuickStartUITests" */;
-			buildPhases = (
-				072ADA662656AFE2008ED14E /* Sources */,
-				072ADA672656AFE2008ED14E /* Frameworks */,
-				072ADA682656AFE2008ED14E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				072ADA6C2656AFE2008ED14E /* PBXTargetDependency */,
-			);
-			name = RealmQuickStartUITests;
-			productName = RealmQuickStartUITests;
-			productReference = 072ADA6A2656AFE2008ED14E /* RealmQuickStartUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,10 +185,6 @@
 						CreatedOnToolsVersion = 12.5;
 					};
 					072ADA5E2656AFE2008ED14E = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 072ADA482656AFDE008ED14E;
-					};
-					072ADA692656AFE2008ED14E = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 072ADA482656AFDE008ED14E;
 					};
@@ -253,7 +205,6 @@
 			targets = (
 				072ADA482656AFDE008ED14E /* RealmQuickStart */,
 				072ADA5E2656AFE2008ED14E /* RealmQuickStartTests */,
-				072ADA692656AFE2008ED14E /* RealmQuickStartUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,13 +220,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		072ADA5D2656AFE2008ED14E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		072ADA682656AFE2008ED14E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,6 +278,7 @@
 				072ADA7D2656D00E008ED14E /* UICollectionViewExtension.swift in Sources */,
 				072ADA512656AFDE008ED14E /* ViewController.swift in Sources */,
 				072ADA4D2656AFDE008ED14E /* AppDelegate.swift in Sources */,
+				07EEB5E2265B83F2006A2F28 /* TimeDetailsViewController.swift in Sources */,
 				072ADA7F26571805008ED14E /* DataSource.swift in Sources */,
 				07EEB5F12666D4CE006A2F28 /* DataBase.swift in Sources */,
 				072ADA4F2656AFDE008ED14E /* SceneDelegate.swift in Sources */,
@@ -348,14 +293,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		072ADA662656AFE2008ED14E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				072ADA6F2656AFE2008ED14E /* RealmQuickStartUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -363,11 +300,6 @@
 			isa = PBXTargetDependency;
 			target = 072ADA482656AFDE008ED14E /* RealmQuickStart */;
 			targetProxy = 072ADA602656AFE2008ED14E /* PBXContainerItemProxy */;
-		};
-		072ADA6C2656AFE2008ED14E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 072ADA482656AFDE008ED14E /* RealmQuickStart */;
-			targetProxy = 072ADA6B2656AFE2008ED14E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -579,44 +511,6 @@
 			};
 			name = Release;
 		};
-		072ADA7A2656AFE2008ED14E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RealmQuickStartUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.kurkin.RealmQuickStartUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RealmQuickStart;
-			};
-			name = Debug;
-		};
-		072ADA7B2656AFE2008ED14E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RealmQuickStartUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.kurkin.RealmQuickStartUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RealmQuickStart;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -643,15 +537,6 @@
 			buildConfigurations = (
 				072ADA772656AFE2008ED14E /* Debug */,
 				072ADA782656AFE2008ED14E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		072ADA792656AFE2008ED14E /* Build configuration list for PBXNativeTarget "RealmQuickStartUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				072ADA7A2656AFE2008ED14E /* Debug */,
-				072ADA7B2656AFE2008ED14E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,22 +9,22 @@ import Foundation
 import RealmSwift
 
 final class DataBase {
-    func load() -> [String] {
-        let realm = try! Realm()
-        return realm.objects(RealmItem.self).map { $0.title }
-    }
-    
     func save(_ item: String) {
         let realm = try! Realm()
         try! realm.write {
             realm.add(RealmItem(title: item))
         }
     }
+    
+    func load() -> [String] {
+        let realm = try! Realm()
+        return realm.objects(RealmItem.self).map { $0.title }
+    }
 }
 
-final class RealmItem : Object {
-    @objc dynamic var title: String = ""
-    
+class RealmItem: Object {
+    @objc dynamic var title = ""
+
     convenience init(title: String) {
         self.init()
         self.title = title
