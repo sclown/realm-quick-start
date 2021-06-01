@@ -59,7 +59,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        present(TimeDetailsViewController(), animated: true)
+        if let info = dataSource.timeInfo(for: indexPath.item) {
+            present(TimeDetailsViewController(with: info), animated: true)
+        }
     }
 }
 

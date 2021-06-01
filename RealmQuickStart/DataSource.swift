@@ -2,7 +2,7 @@ import UIKit
 import RealmSwift
 
 final class DataSource: NSObject, UICollectionViewDataSource {
-    private var tasks: [String] = []
+    private var tasks: Results<RealmItem>?
     private let dataBase = DataBase()
     
     func attach(to collection: UICollectionView) {
@@ -12,18 +12,25 @@ final class DataSource: NSObject, UICollectionViewDataSource {
     }
     
     func append(_ item: String) {
-        tasks.append(item)
         dataBase.save(item)
     }
     
+    func timeInfo(for index: Int) -> RealmItemTime? {
+        guard let item = tasks?[index] else { return nil }
+        if item.time != nil {
+            return item.time
+        }
+        return dataBase.timeInfo(for: item)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        tasks.count
+        tasks?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UICollectionViewListCell = collectionView.dequeCell(indexPath: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = tasks[indexPath.item]
+        content.text = tasks?[indexPath.item].title
         cell.contentConfiguration = content
         return cell
     }
